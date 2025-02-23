@@ -1,21 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
 :root {
     /* Colors */
 
     /* Primary */
 
-    --blue: var(hsl(246, 80%, 60%));
+    --blue: hsl(246, 80%, 60%);
 
-    --light-red__work: var(hsl(15, 100%, 70%)); 
-    --soft-blue__play: var(hsl(195, 74%, 62%));
-    --light-red__study: var(hsl(348, 100%, 68%));
-    --lime-green__excercise: var(hsl(145, 58%, 55%)); 
-    --violet__social: var(hsl(264, 64%, 52%));
-    --soft-orange__self-care: var(hsl(43, 84%, 65%)); 
+    --light-red__work: hsl(15, 100%, 70%); 
+    --soft-blue__play: hsl(195, 74%, 62%);
+    --light-red__study: hsl(348, 100%, 68%);
+    --lime-green__excercise: hsl(145, 58%, 55%); 
+    --violet__social: hsl(264, 64%, 52%);
+    --soft-orange__self-care: hsl(43, 84%, 65%); 
 
     /* Neutral */
 
-    --very-dark-blue: var(hsl(226, 43%, 10%));
-    --dark-blue: var(hsl(235, 46%, 20%)); 
-    --desaturated-blue: var(hsl(235, 45%, 61%));
-    --pale-blue: var(hsl(236, 100%, 87%)); 
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%); 
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%); 
+
+    /* Typography */
+
+    --font-size-card-titles: 18px;
 }
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    /* 3. Add accessible line-height */
+    line-height: 1.5;
+    /* 4. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 5. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 6. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 7. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 8. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    9. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+
+  body {
+    background-color: var(--very-dark-blue);
+    color: #ffffff;
+    padding-top: 5rem;
+  }
+
+  .container {
+    display: grid;
+    place-items: center;
+    grid-gap: 2rem;
+  }
+
+  .first-box {
+    width: 20.4em;
+    height: 12.6em;
+    background-color: var(--dark-blue);
+    border-radius: 1rem;
+  }
+
+  .first-inner-box {
+    background-color: var(--blue);
+    height: 65%;
+    border-radius: 1rem;
+  }
+
+  .box {
+    width: 20.4em;
+    height: 10em;
+    border-radius: 1rem;
+    background-color: var(--dark-blue);
+    position: relative;
+    display: flex;
+    justify-content: end;
+    overflow: hidden;
+  }
+
+  .box img{
+    height: 5em;
+    width: 5em;
+    margin-top: -.7rem;
+    margin-right: 1rem;
+  }
+
+  .inner-box {
+    background-color: var(--dark-blue);
+    border-radius: 1rem;
+    height: 75%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  .work {
+    background-color: var(--light-red__work);
+  }
+
+  .play {
+    background-color: var(--soft-blue__play);
+  }
+
+  .study {
+    background-color: var(--light-red__study);
+  }
+
+  .exercise {
+    background-color: var(--lime-green__excercise);
+  }
+
+  .social {
+    background-color: var(--violet__social);
+  }
+
+  .self-care {
+    background-color: var(--soft-orange__self-care);
+  }
