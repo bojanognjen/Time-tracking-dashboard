@@ -79,6 +79,7 @@
     background-color: var(--very-dark-blue);
     color: #ffffff;
     padding-top: 5rem;
+    font-family: 'Rubik', sans-serif;
   }
 
   .container {
@@ -98,6 +99,56 @@
     background-color: var(--blue);
     height: 65%;
     border-radius: 1rem;
+    display: grid;
+    place-content: center;
+  }
+
+  .second-inner-box {
+    display: flex;
+    height: max-content;
+    justify-content: space-evenly;
+    align-items: end;
+    height: 35%;
+    padding-bottom: 1.5rem;
+    font-size: 18px;
+  }
+
+  .profile-box {
+    width: 16rem;
+    height: 4rem;
+    display: grid;
+    grid-template-columns: 5rem 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .report {
+    grid-area: 1/2/2/3;
+    font-weight: 300;
+    font-size: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    color: #bbc0ff;
+  }
+
+  .name {
+    grid-area: 2/2/3/3;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 24px;
+    font-weight: 300;
+  }
+
+  .profile-box img {
+    grid-area: 1/1/3/2;
+    height: 4rem;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+
+  .darker {
+    color: #7078c9;
   }
 
   .box {
