@@ -32,7 +32,9 @@ function writing(data,firstCall) {
 
 async function loading() {
     try{
-        let response = await fetch('data.json', {cache: 'no-store'});
+        let response = await fetch('https://raw.githubusercontent.com/bojanognjen/Time-tracking-dashboard/master/data.json', {
+            method: 'GET'
+        });
 
         if (!response.ok) {
             throw new Error(`HTTP status is: ${response.status}`);
