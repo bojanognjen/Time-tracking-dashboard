@@ -82,14 +82,13 @@
     font-family: 'Rubik', sans-serif;
     display: grid;
     place-content: center;
-    padding: 3rem;
+    min-height: 100vh;
   }
 
   .container {
     display: grid;
     place-items: center;
     grid-gap: 2rem;
-    margin: 3rem;
   }
 
   .first-box {
