@@ -32,9 +32,7 @@ function writing(data,firstCall) {
 
 async function loading() {
     try{
-        let response = await fetch('/data.json', { 
-            method: 'GET',
-            mode: 'cors'
+        let response = await fetch('/data.json', { cache: 'no-store'
          });
 
         if (!response.ok) {
