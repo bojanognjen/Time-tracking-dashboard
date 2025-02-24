@@ -32,7 +32,10 @@ function writing(data,firstCall) {
 
 async function loading() {
     try{
-        let response = await fetch('/data.json', { cache: 'no-store' });
+        let response = await fetch('/data.json', { 
+            method: 'GET',
+            mode: 'cors'
+         });
 
         if (!response.ok) {
             throw new Error(`HTTP status is: ${response.status}`);
