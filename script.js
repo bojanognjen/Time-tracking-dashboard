@@ -16,11 +16,22 @@ function writing(data,firstCall) {
     }
 
     for(let box of boxes) {
+        console.log(box);
         for(let arrayObject of data) {
             if (box.children[1].children[0].children[0].innerText.toLowerCase() == arrayObject.title.toLowerCase()) {
                 for(let key in arrayObject.timeframes) {
                     if(key == period) {
                         box.children[1].children[1].children[0].textContent = arrayObject.timeframes[key].current + 'hrs';
+                        box.children[1].children[1].children[1].children[1].textContent = ` ${arrayObject.timeframes[key].previous}hrs`;
+                        if (key == 'daily') {
+                            box.children[1].children[1].children[1].children[0].textContent = "Yesterday -";
+                        } 
+                        else if (key == 'weekly') {
+                            box.children[1].children[1].children[1].children[0].textContent = "Last Week -";
+                        } 
+                        else {
+                            box.children[1].children[1].children[1].children[0].textContent = "Last Month -";
+                        }
                     }
                 }
 
