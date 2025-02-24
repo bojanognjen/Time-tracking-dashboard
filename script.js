@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll('.span-first');
-const firstCall = 'daily';
+const firstCall = 'weekly';
 let obj = '';
 let boxes = document.querySelectorAll('.box');
 

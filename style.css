@@ -317,15 +317,31 @@
    }
 
   @media (min-width: 1400px) { 
+    body {
+      max-height: 100vw;
+      display: grid;
+      place-content: center;
+    }
     .container {
       grid-template: 'a b c d'
                      'a e f g';
       max-width: 100%;
     }
 
+    .box {
+      min-width: 15.25rem;
+      width: 15.25rem;
+    }
+
     .first-box {
       height: 32.37rem;
       grid-area: a;
+      min-width: 15.25rem;
+      width: 15.25rem;
+    }
+
+    .profile-box {
+      width: auto;
     }
 
     .profile-box span {
@@ -352,6 +368,13 @@
       flex-direction: column;
       align-items: start;
       justify-content: space-between;
+    }
+
+    .first-inner-box {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      padding-left: 2rem;
     }
 
     .hours {
