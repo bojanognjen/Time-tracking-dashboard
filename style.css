@@ -80,16 +80,22 @@
     color: #ffffff;
     padding-top: 5rem;
     font-family: 'Rubik', sans-serif;
+    display: grid;
+    place-content: center;
+    padding: 3rem;
   }
 
   .container {
     display: grid;
     place-items: center;
     grid-gap: 2rem;
+    margin: 3rem;
   }
 
   .first-box {
-    width: 20.4em;
+    max-width: 20.4em;
+    width: 90vw;
+    min-width: 19.1em;
     height: 12.6em;
     background-color: var(--dark-blue);
     border-radius: 1rem;
@@ -141,15 +147,22 @@
     font-weight: 300;
   }
 
+  .first-name {
+    margin-right: .5rem;
+  }
+
   .profile-box img {
     grid-area: 1/1/3/2;
     height: 4rem;
+    width: 4rem;
     border: 3px solid #fff;
     border-radius: 50%;
   }
 
   .box {
-    width: 20.4em;
+    max-width: 20.4em;
+    width: 90vw;
+    min-width: 19.1em;
     height: 10em;
     border-radius: 1rem;
     background-color: var(--dark-blue);
@@ -235,4 +248,141 @@
   .span-first:hover {
     color: #fff;
     cursor: pointer;
+  }
+
+  .space-between img:hover {
+    cursor: pointer;
+  }
+
+  .inner-box:hover {
+    background-color: hsl(235, 46%, 35%);
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) { 
+    .container {
+      grid-template: 'a b'
+                     'a c'
+                     'd e'
+                     'f g';
+      max-width: 42rem;
+    }
+    
+    .name {
+      font-size: 2rem;
+    }
+
+    .first-box {
+      grid-area: a;
+      height: 100%;
+    }
+
+    .profile-box {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+
+    .profile-box img {
+      margin-bottom: 1.5rem;
+    }
+
+    .second-inner-box {
+      align-items: center;
+    }
+
+    .work {
+      grid-area: b;
+    }
+
+    .play {
+      grid-area: c;
+    }
+
+    .study {
+      grid-area: d;
+    }
+
+    .exercise {
+      grid-area: e;
+    }
+
+    .social {
+      grid-area: f;
+    }
+
+    .self-care {
+      grid-area: g;
+    }
+   }
+
+  @media (min-width: 1400px) { 
+    .container {
+      grid-template: 'a b c d'
+                     'a e f g';
+      max-width: 100%;
+    }
+
+    .first-box {
+      height: 32.37rem;
+      grid-area: a;
+    }
+
+    .profile-box span {
+      display: block;
+    }
+
+    .second-inner-box {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: start;
+      padding-left: 2rem;
+      padding-top: 1.5rem;
+    }
+
+    .name {
+      font-size: 2.5rem;
+    }
+
+    .inner-box {
+      padding: 1.5rem;
+    }
+
+    .time {
+      flex-direction: column;
+      align-items: start;
+      justify-content: space-between;
+    }
+
+    .hours {
+      font-size: 3.5rem;
+    }
+
+    .work {
+      grid-area: b;
+    }
+
+    .play {
+      grid-area: c;
+    }
+
+    .study {
+      grid-area: d;
+    }
+
+    .exercise {
+      grid-area: e;
+    }
+
+    .social {
+      grid-area: f;
+    }
+
+    .self-care {
+      grid-area: g;
+    }
+
+    .box {
+      height: 100%;
+    }
   }

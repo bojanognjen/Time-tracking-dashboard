@@ -16,7 +16,6 @@ function writing(data,firstCall) {
     }
 
     for(let box of boxes) {
-        console.log(box);
         for(let arrayObject of data) {
             if (box.children[1].children[0].children[0].innerText.toLowerCase() == arrayObject.title.toLowerCase()) {
                 for(let key in arrayObject.timeframes) {
@@ -52,7 +51,6 @@ async function loading() {
 
         let data = await response.json();
         obj = data;
-        console.log(data);
         writing(data,firstCall);
 
     }
@@ -71,7 +69,4 @@ buttons.forEach(button => {
     }
 });
 
-
-
-console.log(buttons)
 
