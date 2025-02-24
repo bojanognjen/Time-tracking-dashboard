@@ -32,7 +32,7 @@ function writing(data,firstCall) {
 
 async function loading() {
     try{
-        let response = await fetch('./data.json');
+        let response = await fetch('/data.json?t=' + new Date().getTime());
 
         if (!response.ok) {
             throw new Error(`HTTP status is: ${response.status}`);
