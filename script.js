@@ -22,15 +22,14 @@ function writing(data,firstCall) {
                 for(let key in arrayObject.timeframes) {
                     if(key == period) {
                         box.children[1].children[1].children[0].textContent = arrayObject.timeframes[key].current + 'hrs';
-                        box.children[1].children[1].children[1].children[1].textContent = ` ${arrayObject.timeframes[key].previous}hrs`;
                         if (key == 'daily') {
-                            box.children[1].children[1].children[1].children[0].textContent = "Yesterday -";
+                            box.children[1].children[1].children[1].textContent = `Yesterday - ${arrayObject.timeframes[key].previous}hrs`;
                         } 
                         else if (key == 'weekly') {
-                            box.children[1].children[1].children[1].children[0].textContent = "Last Week -";
+                            box.children[1].children[1].children[1].textContent = `Last Week - ${arrayObject.timeframes[key].previous}hrs`;
                         } 
                         else {
-                            box.children[1].children[1].children[1].children[0].textContent = "Last Month -";
+                            box.children[1].children[1].children[1].textContent = `Last Month - ${arrayObject.timeframes[key].previous}hrs`;
                         }
                     }
                 }
